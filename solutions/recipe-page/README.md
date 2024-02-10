@@ -5,7 +5,7 @@
 This is a solution to the [Recipe page challenge on Frontend    Mentor](https://www.frontendmentor.io/challenges/recipe-page-KiTsR8QQKm).
 
 ## Live Site:
-- This is a [live preview](https://iabdwahab.me/frontend-mentor-solutions/recipe-page)
+- This is a [live preview](https://iabdwahab.me/frontend-mentor-solutions/solutions/recipe-page)
 
 ## Built with:
 
