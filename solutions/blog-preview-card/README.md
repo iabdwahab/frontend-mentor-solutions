@@ -2,10 +2,10 @@
 
 ![Screenshot of the website](./assets/preview/screenshot.png)
 
-This is a solution to the [Social links profile challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/social-links-profile-UG32l9m6dQ).
+This is a solution to the [Blog preview card challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/blog-preview-card-ckPaj01IcS).
 
 ## Live Site:
-- This is a [live preview](https://iabdwahab.github.io/frontend-mentor-solutions/solutions/social-links-profile)
+- This is a [live preview](https://iabdwahab.github.io/frontend-mentor-solutions/solutions/blog-preview-card)
 
 ## Built with:
 
