@@ -10,7 +10,7 @@
   --light-grey-color: hsl(30, 18%, 87%);
   --wenge-brown-color:  hsl(30, 10%, 34%);
   --dark-charcoal-color: hsl(24, 5%, 18%);
-  --main-border-radius: 10px;
+  --main-border-radius: 20px;
 }
 
 * {
@@ -36,7 +36,7 @@ h1, h2 {
 }
 
 .section {
-  margin-top: 30px;
+  margin-top: 27px;
   margin-bottom: 30px;
 }
 
@@ -44,46 +44,56 @@ h1, h2 {
   color: var(--nutmeg-color);
   font-weight: 400;
   font-size: 26px;
+  padding-top: 3px;
+  padding-left: 2px;
   margin-bottom: 10px;
 }
 
 .section__list {
-  margin-left: 25px;
+  margin-left: 28px;
+  margin-top: 11px;
   color: var(--wenge-brown-color);
 }
 .list__item {
-  padding-left: 10px;
+  padding-left: 16px;
+  padding-top: 2px;
 }
 .list__item:not(:last-child) {
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
-.item__title  {
-  margin-right: 4px;
+.item__info  {
+  font-size: 15px;
 }
 
 .container {
-  width: 80%;
-  max-width: 700px;
-  margin: 30px auto;
+  max-width: 690px;
+  margin: 116px auto;
   background-color: var(--white-color);
-  padding: 20px;
+  padding: 36px;
   border-radius: var(--main-border-radius);
 }
 
 .dish-preview__img {
   width: 100%;
   border-radius: var(--main-border-radius);
+  border-radius: 13px;
 }
 
 .dish-info-section__heading {
   color: var(--dark-charcoal-color);
-  margin-top: 10px;
-  margin-bottom: 10px;
-  font-size: 32px;
+  margin-top: -2px;
+  margin-bottom: 16px;
+  padding-left: 2px;
+  word-spacing: 2.1px;
+  font-weight: 500;
+  font-size: 37px;
 }
 
 .section__description {
   color: var(--wenge-brown-color);
+  font-size: 15px;
+  line-height: 1.5;
+  padding-left: 2px;
 }
 
 .preparation-time-section {
@@ -95,16 +105,28 @@ h1, h2 {
 .preparation-time-section__heading {
   color: var(--dark-rasbperry-color);
   margin-bottom: 10px;
+  padding-left: 7px;
+  padding-top: 1px;
+  font-size: 18.6px;
 }
 
-.preparation-time-section__list--item::marker {
+.preparation-time-section .list__item::marker {
   color: var(--dark-rasbperry-color);
+  font-size: 12px;
 }
 
 .ingredients-section__list {
   color: var(--wenge-brown-color);
+  margin-top: 16px;
+}
+.ingredients-section .list__item {
+  padding-left: 12px;
+  padding-top: 2px;
 }
 
+.instructions-section {
+  margin-top: 23px;
+}
 .instructions-section__list {
   line-height: 1.5;
 }
