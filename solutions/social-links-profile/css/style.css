@@ -1,0 +1,87 @@
+/* Importing font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+:root {
+  --green-color: hsl(75, 94%, 57%);
+  --white-color: hsl(0, 0%, 100%);
+  --grey-color: hsl(0, 0%, 20%);
+  --dark-grey-color: hsl(0, 0%, 12%);
+  --off-black-color: hsl(0, 0%, 8%);
+  --main-border-radius: 6px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--off-black-color);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background-color: var(--dark-grey-color);
+  padding: 30px;
+  border-radius: var(--main-border-radius);
+  text-align: center;
+  width: 400px;
+  max-width: 90%;
+}
+
+.card__user-img {
+  width: 100px;
+  border-radius: 50%;
+}
+
+.card__user-name {
+  color: var(--white-color);
+  font-weight: 600;
+  font-size: 30px;
+  margin-top: 10px;
+}
+
+.card__user-address {
+  color: var(--green-color);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.card__user-title {
+  font-size: 16px;
+  color: var(--white-color);
+  margin-top: 10px;
+  margin-bottom: 30px;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.card__user-links {
+  list-style-type: none;
+}
+
+.user-links__item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.user-links__link {
+  background-color: var(--grey-color);
+  display: block;
+  color: var(--white-color);
+  text-decoration: none;
+  padding: 10px 0;
+  border-radius: var(--main-border-radius);
+  font-weight: 600;
+  transition: 0.25s;
+}
+.user-links__link:hover {
+  background-color: var(--green-color);
+  color: var(--off-black-color);
+}
