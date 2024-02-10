@@ -1,6 +1,6 @@
 # Frontend Mentor - Recipe page solution
 
-![Screenshot of the website](./assets/preview/recipe-page.png)
+![Screenshot of the website](./assets/preview/screenshot.png)
 
 This is a solution to the [Recipe page challenge on Frontend    Mentor](https://www.frontendmentor.io/challenges/recipe-page-KiTsR8QQKm).
 
