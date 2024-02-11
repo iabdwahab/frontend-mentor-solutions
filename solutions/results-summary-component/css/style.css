@@ -1,0 +1,191 @@
+/* Importing font */
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+
+:root {
+  --light-red-color: hsl(0, 100%, 67%);
+  --orangey-yellow-color: hsl(39, 100%, 56%);
+  --green-teal-color: hsl(166, 100%, 37%);
+  --cobalt-blue-color: hsl(234, 85%, 45%);
+  --light-red-background-color: hsla(0, 100%, 67%, 0.1);
+  --orangey-yellow-background-color: hsla(39, 100%, 56%, 0.1);
+  --green-teal-background-color: hsla(166, 100%, 37%, 0.1);
+  --cobalt-blue-background-color: hsla(234, 85%, 45%, 0.1);
+  --white-color: hsl(0, 0%, 100%);
+  --pale-blue-color: hsl(221, 100%, 96%);
+  --light-lavender-color: hsl(241, 100%, 89%);
+  --dark-gray-blue-color: hsl(224, 30%, 27%);
+
+  --light-slate-blue-gradient: hsl(252, 100%, 67%);
+  --light-royal-blue-gradient: hsl(241, 81%, 54%);
+  --violet-blue-gradient: hsla(256, 72%, 46%, 1);
+  --persian-blue-gradient: hsla(241, 72%, 46%, 0);
+
+  --container-border-radius: 25px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+body {
+  font-family: 'Hanken Grotesk', sans-serif;
+  background-color: var(--pale-blue-color);
+  min-height: 100vh;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+body,
+.result-section__result {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background-color: white;
+  display: flex;
+  max-width: 800px;
+  border-radius: var(--container-border-radius);
+  box-shadow: 10px 10px 20px var(--light-lavender-color);
+}
+
+.result-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  
+  text-align: center;
+  padding: 40px;
+  background-image: linear-gradient(to top, var(--light-royal-blue-gradient), var(--light-slate-blue-gradient));
+
+  border-radius: var(--container-border-radius);
+}
+
+.result-section__heading,
+.result__total,
+.result-section__stats {
+  color: var(--light-lavender-color);
+}
+
+.result-section__result {
+  background-image: linear-gradient(to top, var(--persian-blue-gradient), var(--violet-blue-gradient));
+
+  width: 100%;
+  max-width: 180px;
+  border-radius: 50%;
+  aspect-ratio: 1 / 1;
+
+  flex-direction: column;
+}
+
+.result__score-average {
+  color: var(--white-color);
+  font-size: 65px;
+}
+
+.result-section__degree {
+  color: var(--white-color);
+  font-size: 30px;
+}
+
+.summary-section {
+  flex: 1;
+  padding: 30px;
+}
+
+.summary-section__heading {
+  color: var(--dark-gray-blue-color);
+  margin-bottom: 20px;
+}
+
+.test {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+  background-color: var(--light-red-background-color);
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: 600;
+}
+.test:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.reaction-test {
+  color: var(--light-red-color);
+  background-color: var(--light-red-background-color);
+}
+.memory-test {
+  color: var(--orangey-yellow-color);
+  background-color: var(--orangey-yellow-background-color);
+}
+.verbal-test {
+  color: var(--green-teal-color);
+  background-color: var(--green-teal-background-color);
+}
+.visual-test {
+  color: var(--cobalt-blue-color);
+  background-color: var(--cobalt-blue-background-color);
+}
+
+.test__icon {
+  width: 25px;
+}
+
+.test__title, 
+.test__result {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.test__score {
+  color: var(--dark-gray-blue-color);
+  font-weight: 800;
+}
+.test__total {
+  color: hsl(0, 0%, 61%);
+}
+
+.continue-btn {
+  background-color: var(--dark-gray-blue-color);
+  width: 100%;
+  padding: 16px 0;
+  border-radius: 100px;
+  border: none;
+
+  margin-top: 30px;
+  color: var(--white-color);
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.continue-btn:hover {
+  background-image: linear-gradient(to top, var(--light-royal-blue-gradient), var(--light-slate-blue-gradient));
+}
+
+
+@media (max-width: 768px) {
+  body {
+    padding: 0;
+  }
+  .container {
+    flex-direction: column;
+  }
+  .container {
+    width: 100%;
+    max-width: 100%;
+  }
+  .result-section {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+}
