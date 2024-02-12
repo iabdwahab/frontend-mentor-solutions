@@ -1,4 +1,4 @@
-# Frontend Mentor - Recipe page solution
+# Frontend Mentor - Blog preview card solution
 
 ![Screenshot of the website](./assets/preview/screenshot.png)
 

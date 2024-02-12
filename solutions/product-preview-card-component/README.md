@@ -1,4 +1,4 @@
-# Frontend Mentor - Product Preview Card Component
+# Frontend Mentor - Product preview card component
 
 ![Screenshot of the website](./assets/preview/screenshot.png)
 

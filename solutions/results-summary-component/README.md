@@ -1,4 +1,4 @@
-# Frontend Mentor - Recipe page solution
+# Frontend Mentor - Result summary component solution
 
 ![Screenshot of the website](./assets/preview/screenshot.png)
 

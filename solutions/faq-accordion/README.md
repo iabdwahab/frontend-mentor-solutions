@@ -1,4 +1,4 @@
-# Frontend Mentor - Recipe page solution
+# Frontend Mentor - FAQs accordion solution
 
 ![Screenshot of the website](./assets/preview/screenshot.png)
 
