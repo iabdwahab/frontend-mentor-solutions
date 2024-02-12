@@ -56,13 +56,16 @@ body {
 }
 
 .question-container {
-  /* padding: 20px 0; */
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 20px;
+  text-align: left;
+  background-color: transparent;
+  border: none;
   color: var(--dark-purple-color);
   cursor: pointer;
+  width: 100%;
 }
 .question-container:hover {
   color: var(--grayish-purple-color);

@@ -10,7 +10,6 @@ function manipulateDOM(data) {
   // To calculate average
   let totalScore = 0;
 
-
   data.slice().reverse().forEach((test, index) => {
     const category = test.category.toLowerCase();
     const score = test.score;
