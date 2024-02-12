@@ -66,9 +66,13 @@ body {
   color: var(--dark-purple-color);
   cursor: pointer;
   width: 100%;
+  outline: none;
 }
 .question-container:hover {
   color: var(--grayish-purple-color);
+}
+.question-container:focus-visible {
+  outline: 3px solid var(--dark-purple-color);
 }
 
 .question {
