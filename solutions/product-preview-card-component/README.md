@@ -1,4 +1,4 @@
-# Frontend Mentor - Recipe page solution
+# Frontend Mentor - Product Preview Card Component
 
 ![Screenshot of the website](./assets/preview/screenshot.png)
 
