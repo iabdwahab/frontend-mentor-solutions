@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Ibrahim AbdElwahab">
+  <title>Interactive Rating Component</title>
+
+  <link rel="shortcut icon" href="assets/imgs/favicon-32x32.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="container">
+    <div class="rate-section">
+      <div class="logo-container">
+        <img src="assets/imgs/icon-star.svg" alt="star logo" class="logo">
+      </div>
+      
+      <h1 class="rate-heading">How did we do?</h1>
+  
+      <p class="description">
+        Please let us know we did with your support request.
+        All feedback is appreciated to help us improve our offering!
+      </p>
+
+      <form action="" class="rate-selection">
+        <ul class="rate-list">
+          <li class="list__item">
+            <input type="radio" id="rate-1" name="rate" class="rate-input" data-rate="1">
+            <button class="rate-btn" type="button">
+              <label for="rate-1" class="list__choose">1</label>
+            </button>
+          </li>
+
+          <li class="list__item">
+            <input type="radio" id="rate-2" name="rate" class="rate-input" data-rate="2">
+            <button class="rate-btn" type="button">
+              <label for="rate-2" class="list__choose">2</label>
+            </button>
+          </li>
+
+          <li class="list__item">
+            <input type="radio" id="rate-3" name="rate" class="rate-input" data-rate="3">
+            <button class="rate-btn" type="button">
+              <label for="rate-3" class="list__choose">3</label>
+            </button>
+          </li>
+
+          <li class="list__item">
+            <input type="radio" id="rate-4" name="rate" class="rate-input" data-rate="4">
+            <button class="rate-btn" type="button">
+              <label for="rate-4" class="list__choose">4</label>
+            </button>
+          </li>
+
+          <li class="list__item">
+            <input type="radio" id="rate-5" name="rate" class="rate-input" data-rate="5">
+            <button class="rate-btn" type="button">
+              <label for="rate-5" class="list__choose">5</label>
+            </button>
+          </li>
+        </ul>
+
+        <input type="submit" class="submit-btn" value="SUBMIT">
+      </form>
+    </div>
+
+    <div class="thanks-section">
+      <div class="illustration-container">
+        <img src="assets/imgs/illustration-thank-you.svg" alt="thanks illustration" class="thanks-illustration">
+      </div>
+
+      <p class="selected-message">You selected <span class="selected-rate">4</span> out of <span class="full-rate">5</span></p>
+
+      <h2 class="thanks-heading">Thank you!</h2>
+
+      <p class="description">
+        We appreciate you taking the time to give a rating. If you ever need more support, 
+        don’t hesitate to get in touch!
+      </p>
+    </div>
+  </main>
+
+
+  <script src="js/script.js"></script>
+</body>
+</html>
