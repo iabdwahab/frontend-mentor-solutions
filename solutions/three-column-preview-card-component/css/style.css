@@ -1,0 +1,126 @@
+/* Importing font */
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+
+:root {
+  --bright-orange-color: hsl(31, 77%, 52%);
+  --dark-cyan-color: hsl(184, 100%, 22%);
+  --very-dark-cyan-color: hsl(179, 100%, 13%);
+  --transparent-white-color: hsla(0, 0%, 100%, 0.75);
+  --very-light-gray-color: hsl(0, 0%, 95%);
+  --main-border-radius: 6px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lexend Deca', sans-serif;
+  background-color: var(--transparent-white-color);
+
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 1000px;
+  max-width: 90%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.column {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  gap: 30px;
+}
+.sedans-column {
+  background-color: var(--bright-orange-color);
+  border-radius: var(--main-border-radius) 0 0 var(--main-border-radius);
+}
+.suvs-column {
+  background-color: var(--dark-cyan-color);
+}
+.luxury-column {
+  background-color: var(--very-dark-cyan-color);
+  border-radius: 0 var(--main-border-radius) var(--main-border-radius) 0;
+}
+
+.column__title {
+  font-family: 'Big Shoulders Display', sans-serif;
+  color: var(--very-light-gray-color);
+  font-size: 35px;
+}
+
+.column__description {
+  color: var(--transparent-white-color);
+  font-size: 18px;
+}
+
+.learn-btn {
+  margin-top: 100px;
+  padding: 10px 40px;
+  border: none;
+  border-radius: 100px;
+  background-color: var(--very-light-gray-color);
+  font-size: 16px;
+  font-family: 'Lexend Deca', sans-serif;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.learn-btn:hover {
+  background-color: transparent;
+  color: white;
+  outline: 2px solid var(--transparent-white-color)
+}
+.sedans-learn-btn {
+  color: var(--bright-orange-color);
+}
+.suvs-learn-btn {
+  color: var(--dark-cyan-color);
+}
+.luxury-learn-btn {
+  color: var(--very-dark-cyan-color);
+}
+
+@media (max-width: 1000px) {
+  .container {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  .sedans-column {
+    border-bottom-left-radius: 0;
+  }
+  .suvs-column {
+    border-top-right-radius: var(--main-border-radius);
+  }
+  .luxury-column {
+    grid-column: span 2;
+    border-radius: 0 0 var(--main-border-radius) var(--main-border-radius);
+  }
+}
+
+@media (max-width: 768px) {
+  .sedans-column {
+    border-radius: var(--main-border-radius) var(--main-border-radius) 0 0;
+  }
+  .suvs-column {
+    border-radius: 0;
+  }
+  .luxury-column {
+    grid-column: 1;
+  }
+  .container {
+    grid-template-columns: 1fr;
+  }
+}
