@@ -1,0 +1,119 @@
+/* Importing font */
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root {
+  --dark-cyan-color: hsl(185, 75%, 39%);
+  --vey-dark-blue-color: hsl(229, 23%, 23%);
+  --dark-grayish-blue-color: hsl(227, 10%, 46%);
+  --dark-gray-color: hsl(0, 0%, 59%);
+  --white-color:  hsl(0, 0%, 100%);
+  --main-border-radius: 10px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+body {
+  font-family: 'Kumbh Sans', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--dark-cyan-color);
+  position: relative;
+  
+  background-image: url('../assets/imgs/bg-pattern-top.svg'), url('../assets/imgs/bg-pattern-bottom.svg');
+  background-position: right 50vw bottom 15vw, left 50vw top 15vw;
+  background-repeat: no-repeat;
+  background-size: cover;
+} 
+
+.card {
+  background-color: var(--white-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  max-width: 95%;
+  border-radius: var(--main-border-radius);
+}
+
+.info-section {
+  width: 100%;
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  padding-top: 50px;
+  border-radius: var(--main-border-radius) var(--main-border-radius) 0 0;
+  position: relative;
+  z-index: 0;
+}
+.card__pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  z-index: -1;
+  object-fit: cover;
+  border-radius: inherit;
+}
+
+.card__img {
+  border-radius: 50%;
+  border: 4px solid var(--white-color);
+}
+
+.card__name {
+  font-weight: 700;
+  color: var(--vey-dark-blue-color);
+  font-size: 18px;
+}
+
+.card__age {
+  color: var(--dark-grayish-blue-color);
+  font-weight: 400;
+}
+
+.card__address {
+  color: var(--dark-grayish-blue-color);
+}
+
+.break-line {
+  background-color: var(--dark-gray-color);
+  border: none;
+  height: 1px;
+  width: 100%;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.stat__number {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.stat__name {
+  color: var(--dark-grayish-blue-color);
+}
+
+@media (max-width: 600px) {
+  body {
+    background-position: right 50vw bottom 60vw, left 50vw top 60vw;
+  }
+}
