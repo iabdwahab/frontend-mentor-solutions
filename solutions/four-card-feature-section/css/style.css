@@ -1,0 +1,141 @@
+/* Importing font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+:root {
+  --red-color: hsl(0, 78%, 62%);
+  --cyan-color: hsl(180, 62%, 55%);
+  --orange-color: hsl(34, 97%, 64%);
+  --blue-color: hsl(212, 86%, 64%);
+  --very-dark-blue-color: hsl(234, 12%, 34%);
+  --grayish-blue-color: hsl(229, 6%, 66%);
+  --very-light-gray-color: hsl(0, 0%, 98%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 85%;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.first-heading,
+.second-heading,
+.description {
+  text-align: center;
+}
+
+.first-heading {
+  font-weight: 200;
+  color: var(--very-dark-blue-color);
+}
+
+.second-heading {
+  font-weight: 600;
+  color: var(--very-dark-blue-color);
+  font-size: 30px;
+}
+
+.description {
+  color: var(--grayish-blue-color);
+  max-width: 550px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  font-weight: 400;
+} 
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-top: 60px;
+  gap: 30px;
+  align-items: center;
+}
+
+.card {
+  padding: 30px;
+  border-radius: 4px;
+  box-shadow: 0px 0px 10px #bcbcbc4d;
+}
+
+.supervisor-card {
+  grid-column: 1;
+  grid-row: span 2;
+  border-top: 4px solid var(--cyan-color);
+}
+.team-builder-card {
+  grid-column: 2;
+  grid-row: 1;
+  border-top: 4px solid var(--red-color);
+}
+.karma-card {
+  grid-column: 2;
+  grid-row: 2;
+  border-top: 4px solid var(--orange-color);
+}
+.calculator-card {
+  grid-column: 3;
+  grid-row: span 2;
+  border-top: 4px solid var(--blue-color);
+}
+
+.card__heading {
+  color: var(--very-dark-blue-color);
+  font-size: 24px;
+}
+
+.card__description {
+  color: var(--grayish-blue-color);
+  margin-top: 10px;
+}
+
+.card__icon {
+  display: block;
+  margin-left: auto;
+  margin-top: 25px;
+}
+
+@media (max-width: 997px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .card {
+    grid-column: unset;
+    grid-row: unset;
+  }
+}
+
+@media (max-width: 768px) {
+  .first-heading {
+    font-size: 22px;
+  }
+  
+  .second-heading {
+    font-size: 22px;
+  }
+
+  .description {
+    font-size: 14px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+    grid-template-rows: unset;
+  }
+}
