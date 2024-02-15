@@ -9,7 +9,7 @@ This is a solution to the [Article preview component challenge on Frontend Mento
 
 ## Built with:
 
-- HTML and CSS [Pure].
+- HTML, CSS, and JavaScript [Pure].
 
 ## Features:
 
