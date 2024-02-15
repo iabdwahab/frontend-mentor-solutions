@@ -21,6 +21,7 @@
 
 body {
   font-family: 'Poppins', sans-serif;
+  background-color: var(--very-light-gray-color);
 }
 
 .container {
@@ -70,6 +71,7 @@ body {
   padding: 30px;
   border-radius: 4px;
   box-shadow: 0px 0px 10px #bcbcbc4d;
+  background-color: white;
 }
 
 .supervisor-card {
