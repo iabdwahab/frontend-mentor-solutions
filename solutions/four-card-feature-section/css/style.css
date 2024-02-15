@@ -103,6 +103,7 @@ body {
 .card__description {
   color: var(--grayish-blue-color);
   margin-top: 10px;
+  font-size: 14px;
 }
 
 .card__icon {
