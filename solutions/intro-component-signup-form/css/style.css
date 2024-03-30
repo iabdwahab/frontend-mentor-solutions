@@ -161,6 +161,9 @@ body {
 /* End form-section */
 
 @media (max-width: 970px) {
+  body {
+    background-image: url('../assets/imgs/bg-intro-mobile.png');
+  }
   .container {
     grid-template-columns: 1fr;
     text-align: center;
