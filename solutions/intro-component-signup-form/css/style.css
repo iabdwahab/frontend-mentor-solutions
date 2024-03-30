@@ -88,9 +88,6 @@ body {
   color: var(--dark-blue-color);
   font-weight: 500;
 }
-.form__input-field::placeholder {
-  color: var(--gray-color);
-}
 .form__input-field:focus {
   border-color: var(--dark-blue-color);
 }
