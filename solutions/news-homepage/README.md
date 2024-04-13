@@ -5,7 +5,7 @@
 This is a solution to the [News homepage challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/news-homepage-H6SWTa1MFl).
 
 ## Live Site:
-- This is a [live preview](https://iabdwahab.github.io/frontend-mentor-solutions/solutions/news-hompage)
+- This is a [live preview](https://iabdwahab.github.io/frontend-mentor-solutions/solutions/news-homepage)
 
 ## Built with:
 
