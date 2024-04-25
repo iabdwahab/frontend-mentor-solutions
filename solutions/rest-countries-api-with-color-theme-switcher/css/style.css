@@ -79,6 +79,34 @@ body.dark-mode-on .dark-mode-btn-text--dark {
 }
 /* End Header */
 
+/* Start selection-section */
+.selection-section {
+  padding: 20px 0;
+  
+}
+.selection-section__search-container {
+  position: relative;
+}
+.selection-section__search-icon {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  font-size: 20px;
+}
+.selection-section__search-input {
+  padding: 15px 10px 15px 50px;
+  width: 300px;
+  border-radius: 4px;
+  border: none;
+  box-shadow: 0px 0px 10px var(--box-shadow-color);
+  outline: none;
+}
+.selection-section__search-input {
+  
+}
+/* End selection-section */
+
 /* Start Main Section */
 .main-section {
   padding-top: 20px;
@@ -86,8 +114,8 @@ body.dark-mode-on .dark-mode-btn-text--dark {
 }
 .main-section__container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 40px;
 }
 .country-card {
   background-color: var(--elements-color);
@@ -112,3 +140,11 @@ body.dark-mode-on .dark-mode-btn-text--dark {
   font-weight: 800;
 }
 /* End Main Section */
+
+@media (max-width: 768px) {
+  .header__container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}

@@ -1,3 +1,4 @@
+// Toggle Dark Mode
 const toggleDarkModeBtn = document.querySelector('.dark-mode-btn');
 
 toggleDarkModeBtn.addEventListener('click', () => {
@@ -5,15 +6,28 @@ toggleDarkModeBtn.addEventListener('click', () => {
 	document.body.classList.toggle('dark-mode-on');
 	document.body.classList.toggle('dark-mode-off');
 
-})
+});
 
+// Search Funtion
+const searchInputEl = document.querySelector('.selection-section__search-input');
 
+function searchCountry(countries) {
+	const searchValue = searchInputEl.value;
+	let searchedCountries = [];
 
-// Fetching Countries
-fetch('data.json')
-.then(res => res.json())
-.then(countries => {
+	countries.forEach(country => {
+		const countryName = country.name.toLowerCase();
 
+		if (countryName.includes(searchValue)) {
+			searchedCountries.push(country);
+		}
+
+	});
+
+	return searchedCountries;
+}
+
+function loopAndAppendHTML(countries) {
 	let countriesHTML = '';
 
 	countries.forEach(country => {
@@ -42,9 +56,25 @@ fetch('data.json')
 			</div>
 		`;
 	});
+	
+	document.querySelector('.main-section__container').innerHTML = countriesHTML;
+}
 
-	document.querySelector('.main-section__container').innerHTML = countriesHTML
 
-	console.log(countries)
+// Fetching Countries
+fetch('data.json')
+.then(res => res.json())
+.then(countries => {
+
+	let countriesHTML = '';
+
+	loopAndAppendHTML(countries);
+
+	searchInputEl.addEventListener('input', () => {
+		const searchedCountries = searchCountry(countries);
+
+		loopAndAppendHTML(searchedCountries);
+
+	});
 
 });
