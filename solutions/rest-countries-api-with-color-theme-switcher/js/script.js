@@ -1,3 +1,15 @@
+const toggleDarkModeBtn = document.querySelector('.dark-mode-btn');
+
+toggleDarkModeBtn.addEventListener('click', () => {
+
+	document.body.classList.toggle('dark-mode-on');
+	document.body.classList.toggle('dark-mode-off');
+
+})
+
+
+
+// Fetching Countries
 fetch('data.json')
 .then(res => res.json())
 .then(countries => {
@@ -35,4 +47,4 @@ fetch('data.json')
 
 	console.log(countries)
 
-})
+});
