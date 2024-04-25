@@ -8,10 +8,32 @@ toggleDarkModeBtn.addEventListener('click', () => {
 
 });
 
+// Region Select
+const regionSelector = document.querySelector('.region-select');
+
+function searchCountriesByRegion(countries, userSelectedRegion) {
+	if (userSelectedRegion === 'all') return countries;
+	
+	let selectedCountries = [];
+
+	countries.forEach(country => {
+		const countryRegion = country.region.toLowerCase();
+
+		if (countryRegion === userSelectedRegion) {
+			selectedCountries.push(country);
+		}
+
+	});
+
+	return selectedCountries;
+}
+
+
+
 // Search Funtion
 const searchInputEl = document.querySelector('.selection-section__search-input');
 
-function searchCountry(countries) {
+function searchCountryByName(countries) {
 	const searchValue = searchInputEl.value;
 	let searchedCountries = [];
 
@@ -35,7 +57,7 @@ function loopAndAppendHTML(countries) {
 		countriesHTML += `
 			<div class="country-card">
 				<div class="country-card__image-container">
-					<img src="${country.flag}" alt="country" class="country-card__img">
+					<img src="${country.flag}" alt="${country.name} Flag" class="country-card__img">
 				</div>
 
 				<div class="country-card__details">
@@ -66,15 +88,24 @@ fetch('data.json')
 .then(res => res.json())
 .then(countries => {
 
-	let countriesHTML = '';
+	console.log(countries)
 
 	loopAndAppendHTML(countries);
 
 	searchInputEl.addEventListener('input', () => {
-		const searchedCountries = searchCountry(countries);
+		const searchedCountries = searchCountryByName(countries);
 
 		loopAndAppendHTML(searchedCountries);
 
 	});
+
+
+	regionSelector.addEventListener('change', e => {
+		const userSelectedRegion = e.target.value;
+
+		const countriesByRegion = searchCountriesByRegion(countries, userSelectedRegion);
+
+		loopAndAppendHTML(countriesByRegion);
+	})
 
 });
