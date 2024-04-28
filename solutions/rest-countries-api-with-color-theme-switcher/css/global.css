@@ -1,0 +1,114 @@
+/* Importing font */
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+:root {
+  --background-color: hsl(0, 0%, 98%);
+  --dark-blue-color: hsl(209, 23%, 22%);
+  --text-color: hsl(200, 15%, 8%);
+  --dark-gray-color-lm-input: hsl(0, 0%, 52%);
+  --box-shadow-color: #dbdbdb;
+  --elements-color: hsl(0, 0%, 100%);
+}
+
+.dark-mode-on {
+  --text-color: hsl(0, 0%, 100%);
+  --background-color: hsl(207, 26%, 17%);
+  --elements-color: hsl(209, 23%, 22%);
+  --box-shadow-color: hsl(206deg 27.82% 10.59%);
+}
+
+* {
+  font-family: "Nunito Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background-color);
+  position: relative;
+}
+
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/* Start Header */
+.header {
+  border-bottom: 4px solid hsla(206, 30%, 11%, 0.212);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--background-color);
+}
+.header__container {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.header__logo-link {
+  text-decoration: none;
+  color: var(--text-color);
+}
+.header__heading {
+  font-size: 28px;
+}
+.dark-mode-btn {
+  background-color: var(--text-color);
+  color: var(--background-color);
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+.dark-mode-btn:hover {
+  opacity: 0.9;
+}
+.dark-mode-btn:active {
+  opacity: 0.8;
+}
+body.dark-mode-off .dark-mode-btn-text--light {
+  display: none;
+}
+body.dark-mode-on .dark-mode-btn-text--dark {
+  display: none;
+}
+/* End Header */
+
+@media (max-width: 768px) {
+  .header__container {
+    gap: 4px;
+  }
+  .header__heading {
+    font-size: 18px;
+  } 
+  .dark-mode-btn {
+    padding: 4px 10px;
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 350px) {
+  .header__container {
+    flex-direction: column;
+  }
+}

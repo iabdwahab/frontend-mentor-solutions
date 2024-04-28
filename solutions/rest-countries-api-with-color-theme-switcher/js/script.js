@@ -13,7 +13,7 @@ const regionSelector = document.querySelector('.region-select');
 
 function searchCountriesByRegion(countries, userSelectedRegion) {
 	if (userSelectedRegion === 'all') return countries;
-	
+
 	let selectedCountries = [];
 
 	countries.forEach(country => {
@@ -38,7 +38,7 @@ function searchCountryByName(countries) {
 	let searchedCountries = [];
 
 	countries.forEach(country => {
-		const countryName = country.name.toLowerCase();
+		const countryName = country.name.common.toLowerCase();
 
 		if (countryName.includes(searchValue)) {
 			searchedCountries.push(country);
@@ -46,6 +46,7 @@ function searchCountryByName(countries) {
 
 	});
 
+	console.log(searchedCountries)
 	return searchedCountries;
 }
 
@@ -55,13 +56,13 @@ function loopAndAppendHTML(countries) {
 	countries.forEach(country => {
 
 		countriesHTML += `
-			<div class="country-card">
+			<button class="country-card" data-country-code="${country.cca3}"	onclick="localStorage.setItem('selectedCountry', '${country.cca3}'); document.location.href='./preview.html'">
 				<div class="country-card__image-container">
-					<img src="${country.flag}" alt="${country.name} Flag" class="country-card__img">
+					<img src="${country.flags.svg}" alt="${country.flags.alt}" class="country-card__img">
 				</div>
 
 				<div class="country-card__details">
-					<h2 class="country-card__country-name">${country.name}</h2>
+					<h2 class="country-card__country-name">${country.name.common}</h2>
 					<p class="country-card__info">
 						<span class="country-card__poulation-text country-card__details-text">Population: </span>
 						<span class="country-card__poulation-number country-card__details-number">${country.population.toLocaleString()}</span>
@@ -75,7 +76,7 @@ function loopAndAppendHTML(countries) {
 						<span class="country-card__poulation-number country-card__details-number">${country.capital}</span>
 					</p>
 				</div>
-			</div>
+			</button>
 		`;
 	});
 	
@@ -84,7 +85,7 @@ function loopAndAppendHTML(countries) {
 
 
 // Fetching Countries
-fetch('data.json')
+fetch('https://restcountries.com/v3.1/all?fields=name,capital,currencies,flags,languages,population,region,cca3,borders,subregion,tld')
 .then(res => res.json())
 .then(countries => {
 
@@ -106,6 +107,6 @@ fetch('data.json')
 		const countriesByRegion = searchCountriesByRegion(countries, userSelectedRegion);
 
 		loopAndAppendHTML(countriesByRegion);
-	})
+	});
 
 });
