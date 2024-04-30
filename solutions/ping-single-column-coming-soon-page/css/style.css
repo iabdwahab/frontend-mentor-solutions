@@ -1,0 +1,119 @@
+/* Importing font */
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  --blue-color: hsl(223, 87%, 63%);
+  --pale-blue-color: hsl(223, 100%, 88%);
+  --light-red-color: hsl(354, 100%, 66%);
+  --gray-color: hsl(0, 0%, 59%);
+  --very-dark-blue-color: hsl(209, 33%, 12%);
+  --white-color: hsl(0, 0%, 100%);
+} 
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  font-family: "Libre Franklin", sans-serif;
+}
+
+.container {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+
+/* Start Header */
+.header__container {
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+/* End Header */
+
+/* Start Main */
+.main__title {
+  font-weight: 100;
+}
+.main__soon-word {
+  font-weight: 800;
+}
+.main__subscribe-text {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.main__form {
+  display: grid;
+  grid-template-columns: 1fr 160px;
+  gap: 10px;
+}
+.email-input-field {
+  height: 40px;
+  border-radius: 200px;
+  border: 1px solid var(--gray-color);
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 13px;
+}
+.notify-btn {
+  height: 40px;
+  background-color: var(--blue-color);
+  color: var(--white-color);
+  border: none;
+  border-radius: 200px;
+}
+.notify-btn:hover {
+  cursor: pointer;
+  opacity: 0.9;
+}
+.notify-btn:active {
+  opacity: 0.8;
+}
+/* End Main */
+
+.hero-img {
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+/* Start Footer */
+.footer__social-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.footer__social-link {
+  font-size: 16px;
+  color: var(--blue-color);
+  border: 1px solid var(--blue-color);
+  display: flex;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  padding: 6px;
+  transition: 0.3s;
+}
+.footer__social-link:hover {
+  background-color: var(--blue-color);
+  color: var(--white-color);
+}
+
+.footer__copyright {
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+/* End Footer */
+
+@media (max-width: 768px) {
+  .main__form {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
