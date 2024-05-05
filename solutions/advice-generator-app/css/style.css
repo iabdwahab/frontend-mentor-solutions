@@ -1,0 +1,87 @@
+/* Importing font */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+:root {
+  --light-cyan-color: hsl(193, 38%, 86%);
+  --neon-green-color: hsl(150, 100%, 66%);
+  --grayish-blue-color: hsl(217, 19%, 38%);
+  --dark-grayish-blue-color: hsl(217, 19%, 24%);
+  --dark-blue-color: hsl(218, 23%, 16%);
+} 
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  font-family: 'Manrope', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: var(--dark-blue-color);
+}
+
+.main {
+  max-width: 600px;
+  background-color: var(--dark-grayish-blue-color);
+  border-radius: 10px;
+  padding: 40px 50px 50px;
+  text-align: center;
+  position: relative;
+}
+
+.advice-heading {
+  color: var(--neon-green-color);
+  font-size: 14px;
+}
+
+.advice-body {
+  color: var(--light-cyan-color);
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.divider-line {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.dice-btn {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 50%);
+  /* display: block; */
+  padding: 14px;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--neon-green-color);
+  cursor: pointer;
+}
+.dice-btn:hover {
+  opacity: 0.9;
+  box-shadow: 0px 0px 10px var(--neon-green-color);
+}
+.dice-btn:active {
+  opacity: 0.8;
+}
+.dice-icon {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .main {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .advice-body {
+    font-size: 20px;
+  }
+}
