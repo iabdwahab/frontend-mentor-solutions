@@ -1,0 +1,133 @@
+/* Importing font */
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root {
+  --moderate-violet-color: hsl(263, 55%, 52%);
+  --very-dark-grayish-blue-color: hsl(217, 19%, 35%);
+  --very-dark-blackish-blue-color: hsl(219, 29%, 14%);
+  --white-color: hsl(0, 0%, 100%);
+  --light-gray-color: hsl(0, 0%, 81%);
+  --light-grayish-blue-color: hsl(210, 46%, 95%);
+
+} 
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+body {
+  background-color: var(--light-grayish-blue-color);
+}
+
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.main-section {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.main-section__container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.card {
+  border-radius: 10px;
+  padding: 20px;
+  color: var(--white-color);
+}
+
+.card-1 {
+  grid-column: 1 / span 2;
+  background-color: var(--moderate-violet-color);
+
+  background-image: url('../assets/imgs/bg-pattern-quotation.svg');
+  background-repeat: no-repeat;
+  background-position: top right 20px;
+}
+.card-2 {
+  grid-column: 3 / 4;
+  background-color: var(--very-dark-grayish-blue-color);
+}
+.card-3 {
+  grid-row: 2;
+  grid-column: 1 / 2;
+  background-color: var(--white-color);
+}
+.card-4 {
+  grid-column: 2 / span 2;
+  background-color: var(--very-dark-blackish-blue-color);
+}
+.card-5 {
+  grid-row: 1 / 3;
+  grid-column: 4;
+  background-color: var(--white-color);
+}
+
+.card__author {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.author__img {
+  width: 50px;
+  border-radius: 50%;
+  border: 2px solid var(--white-color);
+}
+.author__name {
+  color: var(--white-color);
+  font-weight: 600;
+}
+.author__title {
+  color: var(--light-gray-color);
+  font-weight: 500;
+}
+
+.card__testimonial-title {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: var(--white-color);
+}
+.card__testimonial-body {
+  color: var(--light-grayish-blue-color);
+}
+
+.card--white-bg__author-name {
+  color: var(--very-dark-blackish-blue-color);
+}
+.card--white-bg__testimonials-title {
+  color: var(--very-dark-blackish-blue-color);
+}
+.card--white-bg__testimonials-body {
+  color: var(--very-dark-grayish-blue-color);
+}
+
+@media (max-width: 970px) {
+  .main-section__container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .card-5 {
+    grid-column: span 3;
+    grid-row: 4;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-section__container {
+    grid-template-columns: 1fr;
+  }
+  .card {
+    grid-column: unset;
+    grid-row: unset;
+  }
+}
