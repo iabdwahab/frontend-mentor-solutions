@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Ibrahim AbdElwahab">
+  <title>Bookmark Landing Page</title>
+
+  <link rel="shortcut icon" href="assets/imgs/favicon-32x32.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header__container">
+
+      <div class="header__logo">
+        <a href="#" class="header__logo-link">
+          <img src="assets/imgs/logo-bookmark.svg" alt="Bookmark Logo" class="header__logo-img">
+        </a>
+      </div> <!-- ./header__logo -->
+
+      <nav class="header__nav">
+        <button class="header__nav-menu-btn"><ion-icon name="menu-outline"></ion-icon></button>
+        <div class="header__nav-menu">
+          <div class="header__nav-menu-top">
+            <a href="#">
+              <img src="assets/imgs/logo-bookmark.svg" alt="Bookmark Logo" class="header__nav-menu-top-logo">
+            </a>
+            <button class="header__nav-menu-top-close-btn"><ion-icon name="close-outline"></ion-icon></button>
+          </div>
+
+          <ul class="header__nav-list">
+            <li class="header__nav-list-item"><a href="#" class="header__nav-link">FEATURES</a></li>
+            <li class="header__nav-list-item"><a href="#" class="header__nav-link">PRICING</a></li>
+            <li class="header__nav-list-item"><a href="#" class="header__nav-link">CONTACT</a></li>
+            <li class="header__nav-list-item"><a href="#" class="header__nav-logo-link">LOGIN</a></li>
+          </ul>
+
+          <ul class="header__nav-menu-social-list">
+            <li><a href="#" class="header__nav-menu-social-link"><ion-icon name="logo-facebook"></ion-icon></a></li>
+            <li><a href="#" class="header__nav-menu-social-link"><ion-icon name="logo-twitter"></ion-icon></a></li>
+          </ul>
+        </div>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="main-section">
+    <div class="container main-section__container">
+
+      <div class="main-section__text">
+        <h1 class="main-section__heading">A Simple Bookmark Manager</h1>
+        <p class="main-section__description">
+          A clean and simple interface to organize your favourite websites. Open a new 
+          browser tab and see your sites load instantly. Try it for free.
+        </p>
+        <div class="main-section__btns">
+          <button class="main-section__btn main-section__btn-chrome">Get it on Chrome</button>
+          <button class="main-section__btn main-section__btn-firefox">Get it on Firefox</button>
+        </div>
+      </div>
+
+      <div class="main-section__image">
+        <img src="assets/imgs/illustration-hero.svg" alt="illustration" class="main-section__hero-img">
+      </div>
+
+    </div>
+  </main>
+
+  <!-- IonIcons Library -->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <!-- Main JS File -->
+  <script src="js/script.js"></script>
+</body>
+</html>
