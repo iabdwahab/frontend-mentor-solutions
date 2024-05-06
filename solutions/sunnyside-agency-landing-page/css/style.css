@@ -1,0 +1,182 @@
+/* Importing fonts [Barlow, Fraunces] */
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
+
+:root {
+  --soft-red-color: hsl(7, 99%, 70%);
+  --yellow-color: hsl(51, 100%, 49%);
+  --dark-desaturated-cyan-color: hsl(167, 40%, 24%);
+  --dark-blue-color: hsl(198, 62%, 26%);
+  --dark-moderate-cyan-color: hsl(168, 34%, 41%);
+  --very-dark-desaturated-blue-color: hsl(212, 27%, 19%);
+  --very-dark-grayish-blue-color: hsl(213, 9%, 39%);
+  --dark-grayish-blue-color: hsl(232, 10%, 55%);
+  --grayish-blue-color: hsl(210, 4%, 67%);
+  --white-color: hsl(0, 0%, 100%);
+
+  --main-transition: 0.2s
+} 
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  font-family: "Fraunces", serif;
+  font-family: "Barlow", sans-serif;
+}
+/* Start Global Rules */
+a {
+  text-decoration: none;
+}
+/* End Global Rules */
+
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.main-section {
+  min-height: 100vh;
+  background-image: url('../assets/imgs/desktop/image-header.jpg');
+  background-size: cover;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  position: relative;
+}
+
+.header__logo {
+  width: 160px;
+}
+
+.header__menu-btn {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  display: none;
+  cursor: pointer;
+  width: fit-content;
+}
+.header__menu-icon {
+  width: 30px;
+}
+
+.header__nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.header__nav-link {
+  color: var(--white-color);
+  font-size: 20px;
+  font-weight: 600;
+  transition: var(--main-transition);
+}
+.header__nav-link:hover {
+  color: var(--very-dark-desaturated-blue-color);
+  font-size: 20px;
+}
+
+.header__nav-link-contact {
+  font-family: "Fraunces", serif;
+  background-color: var(--white-color);
+  color: var(--very-dark-desaturated-blue-color);
+  padding: 10px 20px;
+  border-radius: 100px;
+  font-weight: 700;
+  transition: var(--main-transition);
+}
+.header__nav-link-contact:hover {
+  background-color: hsla(198, 62%, 26%, 0.1);
+  color: var(--white-color);
+}
+
+.main-section__text {
+  text-align: center;
+}
+.main__heading {
+  color: var(--white-color);
+  font-size: 40px;
+  font-family: "Fraunces", serif;
+  margin-top: 80px;
+}
+.main-section__arrow-icon {
+  margin-top: 60px;
+}
+
+@media (max-width: 768px) {
+  .header__menu-btn {
+    display: block;
+  }
+  .header__nav-links {
+    display: none;
+    background-color: var(--white-color);
+    position: absolute;
+    left: 0;
+    top: 100%;
+    z-index: 1;
+    width: 100%;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    flex-direction: column;
+    gap: 0;
+  }
+  .header__nav-links::after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 25px solid transparent;
+    border-right: 0px solid transparent;
+    border-bottom: 25px solid var(--white-color);
+    position: absolute;
+    bottom: 100%;
+    right: 0;
+  }
+  .header__nav-links--active {
+    display: flex;
+  }
+  .header__menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    background-color: transparent;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+  }
+  .header__menu-overlay--active {
+    display: flex;
+  }
+  
+  .header__nav-link {
+    width: 100%;
+    padding: 14px 0;
+    display: block;
+    text-align: center;
+    color: var(--dark-grayish-blue-color);
+  }
+  .header__nav-link-contact {
+    background-color: var(--yellow-color);
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 40px;
+    margin-top: 20px;
+    color: var(--very-dark-desaturated-blue-color);
+  }
+}
+@media (max-width: 970px) {
+  .main-section {
+    background-image: url('../assets/imgs/mobile/image-header.jpg');
+  }
+}
