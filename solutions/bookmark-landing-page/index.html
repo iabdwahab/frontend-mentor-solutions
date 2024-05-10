@@ -24,13 +24,13 @@
         <div class="header__nav-menu">
           <div class="header__nav-menu-top">
             <a href="#">
-              <img src="assets/imgs/logo-bookmark.svg" alt="Bookmark Logo" class="header__nav-menu-top-logo">
+              <img src="assets/imgs/light-logo-bookmark.svg" alt="Bookmark Logo" class="header__nav-menu-top-logo">
             </a>
             <button class="header__nav-menu-top-close-btn"><ion-icon name="close-outline"></ion-icon></button>
           </div>
 
           <ul class="header__nav-list">
-            <li class="header__nav-list-item"><a href="#" class="header__nav-link">FEATURES</a></li>
+            <li class="header__nav-list-item"><a href="#features" class="header__nav-link">FEATURES</a></li>
             <li class="header__nav-list-item"><a href="#" class="header__nav-link">PRICING</a></li>
             <li class="header__nav-list-item"><a href="#" class="header__nav-link">CONTACT</a></li>
             <li class="header__nav-list-item"><a href="#" class="header__nav-logo-link">LOGIN</a></li>
@@ -56,8 +56,8 @@
           browser tab and see your sites load instantly. Try it for free.
         </p>
         <div class="main-section__btns">
-          <button class="main-section__btn main-section__btn-chrome">Get it on Chrome</button>
-          <button class="main-section__btn main-section__btn-firefox">Get it on Firefox</button>
+          <button class="main-section__btn main-section__btn-chrome hover-active-opacity">Get it on Chrome</button>
+          <button class="main-section__btn main-section__btn-firefox hover-active-opacity">Get it on Firefox</button>
         </div>
       </div>
 
@@ -68,7 +68,7 @@
     </div>
   </main>
 
-  <section class="features-section">
+  <section class="features-section" id="features">
     <div class="container features-section__container">
       <h2 class="section__heading">Features</h2>
       <p class="section__description">
@@ -94,7 +94,7 @@
             Organize your bookmarks however you like. Our simple drag-and-drop interface 
             gives you complete control over how you manage your favourite sites.
           </p>
-          <a href="#" class="feature__link">More Info</a>
+          <a href="#" class="feature__link hover-active-opacity">More Info</a>
         </div>
 
       </div>
@@ -111,7 +111,7 @@
             Our powerful search feature will help you find saved sites in no time at all. 
             No need to trawl through all of your bookmarks.
           </p>
-          <a href="#" class="feature__link">More Info</a>
+          <a href="#" class="feature__link hover-active-opacity">More Info</a>
         </div>
 
       </div>
@@ -128,7 +128,7 @@
             Easily share your bookmarks and collections with others. Create a shareable 
             link that you can send at the click of a button.
           </p>
-          <a href="#" class="feature__link">More Info</a>
+          <a href="#" class="feature__link hover-active-opacity">More Info</a>
         </div>
 
       </div>
@@ -151,7 +151,7 @@
             <h4 class="download-option-card__browser-name">Add to Chrome</h4>
             <p class="download-option-card__version">Minimum vesion 62</p>
           </div>
-          <img src="assets/imgs/bg-dots.svg" alt="dots image">
+          <div class="download-option-card__line"></div>
           <div class="download-option-card__bottom">
             <button class="download-option-card__button">Add & Install Extension</button>
           </div>
@@ -163,7 +163,7 @@
             <h4 class="download-option-card__browser-name">Add to Chrome</h4>
             <p class="download-option-card__version">Minimum vesion 55</p>
           </div>
-          <img src="assets/imgs/bg-dots.svg" alt="dots image">
+          <div class="download-option-card__line"></div>
           <div class="download-option-card__bottom">
             <button class="download-option-card__button">Add & Install Extension</button>
           </div>
@@ -175,7 +175,7 @@
             <h4 class="download-option-card__browser-name">Add to Chrome</h4>
             <p class="download-option-card__version">Minimum vesion 46</p>
           </div>
-          <img src="assets/imgs/bg-dots.svg" alt="dots image">
+          <div class="download-option-card__line"></div>
           <div class="download-option-card__bottom">
             <button class="download-option-card__button">Add & Install Extension</button>
           </div>
@@ -185,6 +185,97 @@
     </div>
   </section>
 
+
+  <section class="questions-section">
+    <div class="container questions-section__container">
+      <h2 class="section__heading questions-section__heading">Frequently Asked Questions</h2>
+      <p class="section__description">
+        Here are some of our FAQs. If you have any other questions you’d like 
+        answered please feel free to email us.
+      </p>
+
+      <div class="questions-wrapper">
+
+        <article class="question-container question-container--active">
+          <button class="question-container__question">
+            <span class="question-container__question-text">What is Bookmark?</span>
+            <ion-icon name="chevron-down-outline" class="question-container__question-icon"></ion-icon>
+          </button>
+          <p class="question-container__answer question-container__answer--active">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt 
+            justo eget ultricies fringilla. Phasellus blandit ipsum quis quam ornare mattis.
+          </p>
+        </article>
+
+        <article class="question-container">
+          <button class="question-container__question">
+            <span class="question-container__question-text">How can I request a new browser?</span>
+            <ion-icon name="chevron-down-outline" class="question-container__question-icon"></ion-icon>
+          </button>
+          <p class="question-container__answer">
+            Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. 
+            Suspendisse imperdiet. Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, 
+            ultricies non ligula. Suspendisse imperdie tVivamus luctus eros aliquet convallis ultricies. 
+            Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.          
+          </p>
+        </article>
+
+        <article class="question-container">
+          <button class="question-container__question">
+            <span class="question-container__question-text">Is there a mobile app?</span>
+            <ion-icon name="chevron-down-outline" class="question-container__question-icon"></ion-icon>
+          </button>
+          <p class="question-container__answer">
+            Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum dolor, ut condimentum 
+            urna vulputate eget. Cras in ligula quis est pharetra mattis sit amet pharetra purus. Sed 
+            sollicitudin ex et ultricies bibendum.
+          </p>
+        </article>
+
+        <article class="question-container">
+          <button class="question-container__question question-container__last-question">
+            <span class="question-container__question-text">What about other Chromium browsers?</span>
+            <ion-icon name="chevron-down-outline" class="question-container__question-icon"></ion-icon>
+          </button>
+          <p class="question-container__answer question-container__last-answer">
+            Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at euismod dui. Aliquam 
+            vitae neque eget nisl gravida pellentesque non ut velit.
+          </p>
+        </article>
+      </div>
+
+      <a href="#" class="questions__more-info-link hover-active-opacity">More Info</a>
+    </div>
+  </section>
+
+  <section class="contact-section">
+    <div class="container contact-section__container">
+      <p class="contact-section__joined">35,000+ already joined</p>
+      <h2 class="contact-section__heading">
+        Stay up-to-date with what <br> we’re doing
+      </h2>
+
+      <form class="contact-section__form">
+        <input type="email" class="contact-section__email-field" placeholder="Enter your email address">
+        <button class="contact-section__contact-btn">Contact</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer__container">
+      <div class="footer__left-side">
+        <img src="assets/imgs/light-logo-bookmark.svg" alt="logo" class="footer__logo">
+        <a href="#" class="footer__left-link">FEATURES</a>
+        <a href="#" class="footer__left-link">PRICING</a>
+        <a href="#" class="footer__left-link">CONTACT</a>
+      </div>
+      <div class="footer__right-side">
+        <a href="#" class="footer__right-link"><ion-icon name="logo-facebook"></ion-icon></a>
+        <a href="#" class="footer__right-link"><ion-icon name="logo-twitter"></ion-icon></a>
+      </div>
+    </div>
+  </footer>
   <!-- IonIcons Library -->
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>

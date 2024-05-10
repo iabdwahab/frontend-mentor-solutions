@@ -10,7 +10,9 @@
   --main-transition-time: 0.2s;
   --main-border-radius: 4px;
 } 
-
+html {
+  scroll-behavior: smooth;
+}
 * {
   margin: 0;
   padding: 0;
@@ -18,10 +20,6 @@
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   font-family: "Rubik", sans-serif;
-}
-body {
-  min-height: 500vh;
-  overflow-x: hidden;
 }
 /* Start Global Rules */
 a {
@@ -35,6 +33,12 @@ img {
 }
 button {
   cursor: pointer;
+}
+.hover-active-opacity:hover {
+  opacity: 0.9;
+}
+.hover-active-opacity:active {
+  opacity: 0.8;
 }
 
 .section__heading {
@@ -126,7 +130,6 @@ button {
   .header__menu-nav--open .header__nav-menu {
     display: block;
   }
-
 
   .header__nav-menu {
     display: none;
@@ -252,12 +255,6 @@ button {
   border-radius: 4px;
   font-size: 14px;
 }
-.main-section__btn:hover {
-  opacity: 0.9;
-}
-.main-section__btn:active {
-  opacity: 0.9;
-}
 .main-section__btn-chrome {
   background-color: var(--soft-blue-color);
   color: var(--white-color);
@@ -379,12 +376,6 @@ button {
   padding: 10px 20px;
   border-radius: 4px;
 }
-.feature__link:hover {
-  opacity: 0.9;
-}
-.feature__link:active {
-  opacity: 0.8;
-}
 
 @media (max-width: 768px) {
   .features-section__selector {
@@ -432,9 +423,13 @@ button {
   padding-top: 40px;
 }
 .download-section__download-options {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   justify-content: center;
   gap: 20px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .download-section__download-option-card {
   display: flex;
@@ -470,19 +465,28 @@ button {
 .download-option-card__version {
   color: var(--grayish-blue-color);
 }
+.download-option-card__line {
+  background-image: url('../assets/imgs/bg-dots.svg');
+  background-repeat: repeat-x;
+  width: 100%;
+  height: 4px;
+}
 .download-option-card__button {
   display: block;
   width: 100%;
   background-color: var(--soft-blue-color);
   color: var(--white-color);
-  padding: 14px 0;
+  padding: 12px 0;
   border-radius: 4px;
-  border: none;
+  border: 2px solid var(--soft-blue-color);
   cursor: pointer;
   font-weight: 500;
+  transition: var(--main-transition-time);
 }
 .download-option-card__button:hover {
   opacity: 0.9;
+  background-color: var(--white-color);
+  color: var(--soft-blue-color);
 }
 .download-option-card__button:active {
   opacity: 0.8;
@@ -514,3 +518,186 @@ button {
   }
 }
 /* End Downlaod Section */
+
+/* Start Questions Section */
+.questions-section {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+.questions-wrapper {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.question-container__question {
+  width: 100%;
+  padding: 20px 14px;
+  display: flex;
+  justify-content: space-between;
+  background-color: transparent;
+  border: none;
+  border-top: 1px solid #dbdbdb;
+  font-size: 16px;
+  font-weight: 500;
+}
+.question-container__last-question {
+  border-bottom: 1px solid #dbdbdb;
+}
+.question-container__question-icon {
+  color: var(--soft-blue-color);
+  font-weight: 800;
+  transition: 0.3s;
+}
+.question-container--active .question-container__question-icon {
+  color: var(--soft-red-color);
+  transform: rotate(180deg);
+}
+.question-container__question:hover .question-container__question-text {
+  color: var(--soft-red-color);
+}
+.question-container__answer {
+  color: var(--grayish-blue-color);
+  padding-left: 14px;
+  padding-right: 14px;
+  margin-bottom: 0;
+  transition: margin 0.3s, opacity 0.3s;
+  opacity: 0;
+  font-size: 0;
+  overflow: hidden;
+}
+.question-container--active .question-container__last-answer {
+  margin-top: 14px;
+}
+.question-container--active .question-container__answer {
+  margin-bottom: 14px;
+  opacity: 1;
+  height: fit-content;
+  font-size: 16px;
+}
+
+.questions__more-info-link {
+  display: block;
+  background-color: var(--soft-blue-color);
+  color: var(--white-color);
+  padding: 10px 20px;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  .question-container__question {
+    font-size: 15px;
+  }
+  .question-container--active .question-container__answer {
+    font-size: 15px;
+  }
+}
+/* End Questions Section */
+
+/* Start Contact Section */
+.contact-section {
+  background-color: var(--soft-blue-color);
+  color: var(--white-color);
+  padding: 40px 0;
+  text-align: center;
+}
+.contact-section__joined {
+  font-size: 14px;
+}
+.contact-section__heading {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 26px;
+}
+.contact-section__form {
+  display: grid;
+  grid-template-columns: 1fr 100px;
+  grid-template-rows: 40px;
+  gap: 14px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.contact-section__email-field,
+.contact-section__contact-btn {
+  border-radius: 4px;
+  border: none;
+}
+.contact-section__email-field {
+  padding: 0 20px;
+  outline-color: var(--grayish-blue-color);
+}
+.contact-section__email-field::placeholder {
+  color: var(--grayish-blue-color);
+}
+.contact-section__contact-btn {
+  background-color: var(--soft-red-color);
+  color: var(--white-color);
+  font-weight: 600;  
+}
+.contact-section__contact-btn:hover {
+  background-color: hsl(0, 92%, 63%);
+}
+.contact-section__contact-btn:active {
+  background-color: hsl(0, 87%, 59%);
+}
+@media (max-width: 768px) {
+  .contact-section__form {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 40px);
+  }
+  .contact-section__heading {
+    font-size: 22px;
+  }
+}
+/* End Contact Section */
+
+/* Start Footer */
+.footer {
+  background-color: var(--very-dark-blue-color);
+  padding: 20px 0;
+}
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.footer__left-side {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.footer__left-link {
+  color: var(--grayish-blue-color);
+  transition: var(--main-transition-time);
+}
+.footer__right-side {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.footer__right-link {
+  color: var(--white-color);
+  font-size: 26px;
+  transition: var(--main-transition-time);
+}
+.footer__left-link:hover,
+.footer__right-link:hover {
+  color: var(--soft-red-color);
+}
+@media (max-width: 768px) {
+  .footer__left-side {
+    flex-direction: column;
+    color: var(--white-color);
+  }
+  .footer__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  }
+}
+/* End Footer */

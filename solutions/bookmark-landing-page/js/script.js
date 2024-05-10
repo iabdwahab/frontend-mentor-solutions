@@ -30,4 +30,19 @@ featuresSelectorBtns.forEach((btn) => {
 
   });
 
-})
+});
+
+// Question Section
+const questionContainers = document.querySelectorAll('.question-container');
+const questionsBtns = document.querySelectorAll('.question-container');
+
+questionsBtns.forEach((btn, index) => {
+
+  btn.addEventListener('click', () => {
+
+    document.querySelector('.question-container--active').classList.remove('question-container--active');
+    questionContainers[index].classList.add('question-container--active');
+
+  });
+
+});
