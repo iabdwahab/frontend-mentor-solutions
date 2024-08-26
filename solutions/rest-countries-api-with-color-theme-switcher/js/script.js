@@ -46,7 +46,6 @@ function searchCountryByName(countries) {
 
 	});
 
-	console.log(searchedCountries)
 	return searchedCountries;
 }
 
